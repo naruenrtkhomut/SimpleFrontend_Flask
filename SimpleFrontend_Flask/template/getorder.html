@@ -1,0 +1,25 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<h1 align="center" class="display-4 text-danger">Get your order</h1>
+<div align="center" class="jumbotron-fluid text-danger">
+    {% if ordername %}
+    <div>{{ Order[ordername]['OrderName'] }}</div>
+    <div>
+        <img src="{{ Order[ordername]['pic'] }}" alt="{{ Order[ordername]['OrderName'] }}" />
+    </div>
+    <div>
+        <form class="form-group" action="/GetOrder" method="post">
+            <label>{{ Order[ordername]['cost'] }} Baht</label>
+        </form>
+    </div>
+    <div>
+        <div>Spec1 : {{ Order[ordername]['Spec1'] }}</div>
+        <div>Spec2 : {{ Order[ordername]['Spec2'] }}</div>
+        <div>Spec3 : {{ Order[ordername]['Spec3'] }}</div>
+        <div>Spec4 : {{ Order[ordername]['Spec4'] }}</div>
+    </div>
+    {% else %}
+    <div>No order getting yet</div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div align="center" class="jumbotron-fluid text-info">
+        <h1 class="display-4">You can contact us here</h1>
+        <h1 class="display-4">Phone number</h1>
+        {% for phonenumber_tmp in PhoneNumber %}
+        <div>{{ PhoneNumber[phonenumber_tmp]['name'] }} CALL : 0{{ phonenumber_tmp }}</div>
+        {% endfor %}
+        <h1 align="center" class="display-4">Connect with us here</h1>
+        {% for social_tmp in Social %}
+        <div class="d-inline p4"><a href="{{ Social[social_tmp]['Link'] }}"><img src="{{ Social[social_tmp]['Pic'] }}" width="10%" /></a></div>
+        {% endfor %}
+    </div>
+{% endblock %}
