@@ -1,0 +1,11 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div align="center" class="container text-info">
+    <h1 class="display-4">Order code tracking order</h1>
+    <form class="form-group" method="get" action="/Tracking/OrderCode/Track">
+        <label>Order code : </label>
+        <input type="text" name="OrderCode" placeholder="Order code..."/>
+        <button class="btn btn-info" type="submit">Track</button>
+    </form>
+</div>
+{% endblock %}

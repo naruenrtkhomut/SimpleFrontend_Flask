@@ -1,0 +1,13 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div align="center" class="container text-info">
+    <h1>Payment list</h1>
+    {% for payment_tmp in Payment %}
+    <div>
+        <div class="d-inline">{{ Payment[payment_tmp]['Name'] }}</div>
+        <div class="d-inline">{{ Payment[payment_tmp]['ACCNumber'] }}</div>
+        <div class="d-inline"><img src="{{ Payment[payment_tmp]['Pic'] }}" width="5%"/></div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
